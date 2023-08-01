@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 pytest = "*"
 django = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
 
 [dev-packages]
 
