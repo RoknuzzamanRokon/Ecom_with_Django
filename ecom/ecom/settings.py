@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'api',
     'api.category',
     'api.product',
+    # 'api.user',
+    
 
 ]
 
@@ -112,6 +114,7 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
 # Older versions of Django that use os module for path traversal do this instead
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -119,6 +122,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH_USER_MODEL = 'user.CustomUser'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
