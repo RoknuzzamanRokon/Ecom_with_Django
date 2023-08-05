@@ -10,6 +10,8 @@ django-cors-headers = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+product = "*"
+pillow = "*"
 
 [dev-packages]
 
