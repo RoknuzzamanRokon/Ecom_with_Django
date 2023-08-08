@@ -5,7 +5,10 @@ from . import views
 router = routers.DefaultRouter()
 router.register(r'', views.UserViewsSet)
 
+
 urlpatterns = [
-    path('login/',views.signin, name='signin'),
-    path('logout/'views.signout, Name='signout')
+    path('', include(router.urls)),
+    path('login/', views.signin, name='signin'),
+    path('logout/<int:id>/', views.signout, name='signout'),
+    
 ]
