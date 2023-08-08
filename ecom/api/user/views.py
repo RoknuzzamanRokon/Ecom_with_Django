@@ -94,11 +94,15 @@ class UserViewsSet(viewsets.ModelViewSet):
     
     permission_classes_by_action = {'create': [AllowAny]}
     
-    queryset = CustomUser.objects.all().order_by('sid')
+    queryset = CustomUser.objects.all().order_by('id')
     serializer_class = UserSerializer
     
     def get_permissions(self):
         try:
-            return [permissions.AllowAny() for permissoin in self.permission_classes_by_action[self.action]]
+            return [permissions.AllowAny() for permission in self.permission_classes_by_action[self.action]]
         except KeyError:
-            return [permissions.AllowAny() for permissoin in self.permission_classes]
+            return [permissions.AllowAny() for permission in self.permission_classes]
+        
+        
+        
+        
