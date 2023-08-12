@@ -3,7 +3,7 @@ from .models import Order
 
 
 
-class OrderSerializer(serializers.HyperlinkedModelSerializers):
+class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
         field = ('user')
